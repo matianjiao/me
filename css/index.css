@@ -132,9 +132,20 @@ body{
 .xia-img>div{
     height: 100px;
     padding: 10px 20px;
-    background:url(../images/welcome.jpg) no-repeat;
-    background-size: cover;
-    background-origin: content-box;
+    background-size: cover !important;
+    background-origin: content-box !important;
+}
+.xia-img>div:nth-child(1){
+    background: url("../images/dian6.jpg") no-repeat center center;
+}
+.xia-img>div:nth-child(2){
+    background: url("../images/dian2.jpg") no-repeat center center;
+}
+.xia-img>div:nth-child(3){
+    background: url("../images/dian3.jpg") no-repeat center center;
+}
+.xia-img>div:nth-child(4){
+    background: url("../images/dian4.jpg") no-repeat center center;
 }
 .xia2{
     background:rgba(12,12,12,0.9);
@@ -190,7 +201,7 @@ body{
     top: 20%;
     right: 10%;
     width:250px;
-    height: 300px;
+    height: 280px;
     perspective: 200px;
     transform-style: preserve-3d;
     text-align: center;
@@ -230,7 +241,7 @@ body{
     }
     .info{
         width:280px;
-        height: 330px;
+        height: 290px;
     }
 }
 @media screen and (min-width:1200px) {
@@ -239,7 +250,7 @@ body{
     }
     .info{
         width: 300px;
-        height: 380px;
+        height: 300px;
     }
 }
 
@@ -316,6 +327,10 @@ body{
     background: url("../images/xiao4.png") no-repeat center;
     background-size: contain;
 }
+.imgs>div:nth-child(13){
+    background: url("../images/xiao5.png") no-repeat center;
+    background-size: contain;
+}
 
 @media screen and (min-width:800px ) and (max-width: 1200px) {
     .hengimg{
@@ -352,10 +367,10 @@ body{
     text-align: center;
     font-family: "微软雅黑";
     font-size: 25px;
-    width: 130px;
-    height: 60px;
+    width: 110px;
+    height: 55px;
     line-height: 60px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 4px double #fff;
     color:#fff;
     margin: 40px auto 20px;
     transition: all 0.5s ease-in-out;
@@ -441,8 +456,8 @@ body{
 @media screen and (min-width:800px ) and (max-width: 1200px) {
     .zuopin{
         font-size: 27px;
-        width: 150px;
-        height:70px ;
+        width: 120px;
+        height:65px ;
         line-height: 70px;
         margin: 45px auto 20px;
     }
@@ -451,8 +466,8 @@ body{
 @media screen and (min-width:1200px) {
     .zuopin{
         font-size: 30px;
-        width: 200px;
-        height: 80px;
+        width: 140px;
+        height: 70px;
         line-height: 80px;
         margin: 50px auto 20px;
     }
@@ -522,10 +537,10 @@ body{
     text-align: center;
     font-family: "微软雅黑";
     font-size: 25px;
-    width: 190px;
-    height: 60px;
+    width: 170px;
+    height: 55px;
     line-height: 60px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 4px double #fff;
     color:#fff;
     margin: 40px auto 20px;
     transition: all 0.5s ease-in-out;
@@ -623,6 +638,45 @@ body{
 .yx11{
     background: url("../images/jisuanqi.png") no-repeat center;
 }
+.yx12{
+    background: url("../images/yuan1.png") no-repeat center 40%;
+}
+.yx13{
+     background: url("../images/yuan2.png") no-repeat center 40%;
+ }
+.yx14{
+    background: url("../images/yuan3.png") no-repeat center 40%;
+}
+.yx15{
+    background: url("../images/yuan4.png") no-repeat center 40%;
+}
+.yx16{
+    background: url("../images/yuan5.png") no-repeat center 40%;
+}
+.youxiao{
+    position: relative;
+}
+.xiangzuo,.xiangyou{
+    width: 80px;
+    height: 80px;
+    color:#444;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    z-index: 3;
+    cursor: pointer;
+    font-size: 40px !important;
+    transition: all ease-in-out 0.35s;
+}
+.xiangzuo:hover,.xiangyou:hover{
+    color: #cccccc;
+}
+.xiangzuo{
+    left: 0;
+}
+.xiangyou{
+    right: 0;
+}
 
 .yuanzhao{
     width: 262px;
@@ -653,8 +707,8 @@ body{
 @media screen and (min-width:800px ) and (max-width: 1200px) {
     .zuopin1{
         font-size: 27px;
-        width: 210px;
-        height:70px ;
+        width: 190px;
+        height:65px ;
         line-height: 70px;
         margin: 45px auto 20px;
     }
@@ -670,8 +724,8 @@ body{
 @media screen and (min-width:1200px) {
     .zuopin1{
         font-size: 30px;
-        width: 250px;
-        height: 80px;
+        width: 210px;
+        height: 70px;
         line-height: 80px;
         margin: 50px auto 40px;
     }

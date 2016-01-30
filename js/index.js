@@ -155,9 +155,9 @@ $(function(){
     var chang=$(".imgs");
     chang.html(chang.html()+chang.html());
     var item=$(".item");
-    chang.css({width:($($(".item")[0]).width()+2)*item.length});
+    chang.css({width:($($(".item")[0]).width()+1)*item.length});
     //移动速度
-    var speed=2;
+    var speed=1;
     //鼠标移开
     function  move1(){
         if(chang.position().left<-chang.width()/2){
@@ -166,7 +166,7 @@ $(function(){
         chang.css({left:chang.position().left-speed+"px"});
     }
     //定时器  控制移动的时间
-    var timer=setInterval(move1,30);
+    var timer=setInterval(move1,10);
     //鼠标移入
     $(".hengimg").hover(function(){
         clearInterval(timer);
@@ -184,7 +184,6 @@ $(function(){
         imgindex=$(".zhezhao1").index(this);
         $(this).finish();
         $(this).animate({opacity:0},300);
-        console.log(imgindex,imgarr[index]);
         $(".texian").css({
             backgroundImage: "url(images/" + imgarr[imgindex] + ")",
             backgroundRepeat: "no-repeat",
@@ -207,7 +206,7 @@ $(function(){
     })
 
 //换一批
-    var huanda= 1,huanzhong= 1,huanxiao=1;
+    var huanda= 1,huanzhong= 1,huanxiao=0;
     $(window).resize(function(){
         var clientW=$(window).width();
         if(clientW>1200){//大屏
@@ -216,50 +215,59 @@ $(function(){
             $(".youxiao").css({display:"none"});
             $(".huan").css({display:"none"});
             $(".hda").css({display:"block"});
-            $(".hda").click(function(){
-                $(".youxida").finish();
-                $(".youxida").fadeOut(1000);
-                $(".youxida").eq(huanda).fadeIn(1000);
-                huanda++;
-                if(huanda==$(".youxida").length){
-                    huanda=0;
-                }
-            })
         }else if(clientW<=1200 && clientW>=800){//中屏
             $(".youda").css({display:"none"});
             $(".youzhong").css({display:"block"});
             $(".youxiao").css({display:"none"});
-
             $(".huan").css({display:"none"});
             $(".hzhong").css({display:"block"});
-
-            $(".hzhong").click(function(){
-                $(".youxizhong").finish();
-                $(".youxizhong").fadeOut(1000);
-                $(".youxizhong").eq(huanzhong).fadeIn(1000);
-                huanzhong++;
-                if(huanzhong==$(".youxizhong").length){
-                    huanzhong=0;
-                }
-            })
         }else{
             $(".youda").css({display:"none"});
             $(".youzhong").css({display:"none"});
             $(".youxiao").css({display:"block"});
             $(".huan").css({display:"none"});
             $(".hxiao").css({display:"block"});
-            $(".hxiao").click(function(){
-                $(".youxixiao").finish();
-                $(".youxixiao").fadeOut(1000);
-                $(".youxixiao").eq(huanxiao).fadeIn(1000);
-                huanxiao++;
-                if(huanxiao==$(".youxixiao").length){
-                    huanxiao=0;
-                }
-            })
         }
     })
     $(window).resize();
+
+    $(".hda").click(function(){
+        $(".youxida").finish();
+        $(".youxida").fadeOut(1000);
+        $(".youxida").eq(huanda).fadeIn(1000);
+        huanda++;
+        if(huanda==$(".youxida").length){
+            huanda=0;
+        }
+    })
+    $(".hzhong").click(function(){
+        $(".youxizhong").finish();
+        $(".youxizhong").fadeOut(1000);
+        $(".youxizhong").eq(huanzhong).fadeIn(1000);
+        huanzhong++;
+        if(huanzhong==$(".youxizhong").length){
+            huanzhong=0;
+        }
+    })
+    $(".xiangyou").click(function(){
+        huanxiao++;
+        if(huanxiao==$(".youxixiao").length){
+            huanxiao=0;
+        }
+        $(".youxixiao").finish();
+        $(".youxixiao").fadeOut(1000);
+        $(".youxixiao").eq(huanxiao).fadeIn(1000);
+
+    })
+    $(".xiangzuo").click(function(){
+        huanxiao--;
+        if(huanxiao==-1){
+            huanxiao=$(".youxixiao").length-1;
+        }
+        $(".youxixiao").finish();
+        $(".youxixiao").fadeOut(1000);
+        $(".youxixiao").eq(huanxiao).fadeIn(1000);
+    })
 
 
 })
