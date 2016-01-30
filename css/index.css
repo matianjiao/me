@@ -121,6 +121,7 @@ body{
     perspective: 700px;
     transform-style: preserve-3d;
     transform-origin: bottom;
+    /*margin-top: -44px;*/
 }
 .xia1{
     background:rgba(27,28,29,0.9);
@@ -152,6 +153,7 @@ body{
     transform-origin: top;
     transition:all ease-in-out .5s ;
     transform:rotateX(-90deg);
+    /*display: none;*/
 }
 .xia-con-zi{
     cursor: pointer;
@@ -567,8 +569,8 @@ body{
 }
 .huan{
     position: absolute;
-    bottom:-12%;
-    right: 12%;
+    bottom:-30%;
+    right: 5%;
     font-size:25px !important;
     color:#999;
 }
@@ -642,16 +644,23 @@ body{
     background: url("../images/zhengzhan.png") no-repeat 30% 32%;
 }
 .yx13{
-     background: url("../images/yuan1.png") no-repeat center 40%;
+     background: url("../images/apple.jpg") no-repeat center center;
+    background-size: cover;
  }
 .yx14{
-    background: url("../images/yuan3.png") no-repeat center 40%;
+    background: url("../images/jishiben.png") no-repeat 40% center;
 }
 .yx15{
-    background: url("../images/yuan4.png") no-repeat center 40%;
-}
+     background: url("../images/yuan1.png") no-repeat center 40%;
+ }
 .yx16{
     background: url("../images/yuan5.png") no-repeat center 40%;
+}
+.yx17{
+    background: url("../images/yuan3.png") no-repeat center 40%;
+}
+.yx18{
+    background: url("../images/yuan2.png") no-repeat center 40%;
 }
 .youxiao{
     position: relative;
@@ -793,6 +802,7 @@ p span{
     display: inline-block;
     padding: 20px;
     color:#F3F3F3;
+
 }
 
 @media screen and (min-width:800px ) and (max-width: 1200px) {
@@ -897,12 +907,13 @@ p span{
     position: fixed;
     bottom: 30px;
     right: 10px;
-    color: #BCBCBC;
+    color:#999;
     transform:rotateZ(90deg);
     font-size: 40px !important;
     display: none;
     z-index: 4;
 }
 .top:hover{
+    transition: all ease 1s;
     color: #ccc;
 }
