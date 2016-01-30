@@ -61,10 +61,10 @@ body{
     height: 60px;
     background:rgba(0,0,0,0.7);
     font-size: 18px;
-    position:absolute;
+    position:fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 4;
 }
 .header1-con{
     width: 100%;
@@ -469,7 +469,7 @@ body{
         width: 140px;
         height: 70px;
         line-height: 80px;
-        margin: 50px auto 20px;
+        margin: 50px auto 25px;
     }
 }
 
@@ -639,10 +639,10 @@ body{
     background: url("../images/jisuanqi.png") no-repeat center;
 }
 .yx12{
-    background: url("../images/yuan1.png") no-repeat center 40%;
+    background: url("../images/zhengzhan.png") no-repeat 30% 32%;
 }
 .yx13{
-     background: url("../images/yuan2.png") no-repeat center 40%;
+     background: url("../images/yuan1.png") no-repeat center 40%;
  }
 .yx14{
     background: url("../images/yuan3.png") no-repeat center 40%;
@@ -677,7 +677,16 @@ body{
 .xiangyou{
     right: 0;
 }
-
+.hudie{
+    width: 280px;
+    height: 200px;
+    background: url("../images/hudie.png") no-repeat ;
+    background-size:contain;
+    position: absolute;
+    top:0;
+    right:0;
+    transform:rotateZ(60deg);
+}
 .yuanzhao{
     width: 262px;
     height: 262px;
@@ -759,6 +768,8 @@ body{
 }
 h1{
     text-align: center;
+    font-size: 26px;
+    font-weight: 100;
 }
 p{
     color:#DEDEDE;
@@ -786,18 +797,22 @@ p span{
 
 @media screen and (min-width:800px ) and (max-width: 1200px) {
     .about>div{
-        height: 400px;
+        padding: 70px 0;
+        height:500px;
     }
 }
 @media screen and (min-width: 1200px) {
     .about>div{
-        height: 400px;
+        padding: 70px 0;
+        height: 500px;
     }
 }
 
 /*=========联系我=======*/
 .aboutbag1{
-    transition: all 0.35s ease-in-out;
+    transition: all 2s ease-in-out;
+    padding-bottom: 210px;
+    position: relative;
 }
 .about1{
     text-align: center;
@@ -829,4 +844,65 @@ p span{
 }
 .about1 .lianxi{
     font-size: 30px;
+}
+.taoxin{
+    width:240px;
+    height: 240px;
+    position: absolute;
+    background: url("../images/taoxin.png");
+    background-size: cover;
+    transition: all 2s ease-in-out;
+    animation: taoxin 2s ease-in-out infinite;
+    animation-direction:alternate;
+}
+@keyframes taoxin {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+.taoxin1{
+    top:-15%;
+    left: 0;
+    transform: rotateY(-180deg);
+}
+.taoxin2{
+    width: 200px;
+    height: 200px;
+    top:30%;
+    left: 40%;
+}
+.taoxin3{
+    top:-30%;
+    right: 0%;
+}
+.taoxin4{
+    bottom:0%;
+    left: 0%;
+    transform: rotateZ(180deg);
+}
+.taoxin5{
+    bottom:-10%;
+    right: 0%;
+    transform: rotateX(180deg);
+}
+
+
+/*=======返回顶部=======*/
+.top{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    color: #BCBCBC;
+    transform:rotateZ(90deg);
+    font-size: 40px !important;
+    display: none;
+    z-index: 4;
+}
+.top:hover{
+    color: #ccc;
 }

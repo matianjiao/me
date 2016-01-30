@@ -84,6 +84,32 @@ $(function(){
     })
     $(window).resize();
 
+//    header
+    $(window).scroll(function() {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 1000) {
+            $(".top").fadeIn(500);
+        }else{
+            $(".top").fadeOut(500);
+        }
+    })
+    $(".tiao").click(function(){
+        var i=$(".tiao").index(this);
+        var newtop=$($('.floor')[i]).offset().top-50;
+        $({top:$(window).scrollTop()}).animate(
+            {top:newtop},
+            {
+                duration:700,
+                step:function(){
+                    $(window).scrollTop(this.top);
+                }
+            }
+        )
+    })
+
+
+
+
 
 //点击汉堡包
     var flag=true;
@@ -268,6 +294,21 @@ $(function(){
         $(".youxixiao").fadeOut(1000);
         $(".youxixiao").eq(huanxiao).fadeIn(1000);
     })
+
+
+    //返回顶部
+    $('.top').click(function(){
+        $({top:$(window).scrollTop()}).animate(
+            {top:0},
+            {
+                duration:700,
+                step:function(){
+                    $(window).scrollTop(this.top);
+                }
+            }
+        )
+    });
+
 
 
 })
