@@ -107,7 +107,10 @@ $(function(){
         )
     })
 
-
+////鼠标经过header
+//    $(".header-con").hover(function(){
+//
+//    })
 
 
 
