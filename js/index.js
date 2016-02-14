@@ -141,12 +141,14 @@ $(function(){
     $("span[data-role='xiangxia']").click(function(){
         if(flag1){
             $(".xia2").css({transform:"rotateX(0deg)"});
+            $(".huan").css({display:"none"});
             setTimeout(function(){
                 $(".xia1").css({display:"block",});
             },800);
             flag1=false;
         }else{
             $(".xia1").css({display:"none"});
+            $(".huan").css({display:"block"});
             setTimeout(function(){
                 $(".xia2").css({transform:"rotateX(-90deg)"});
             },200);
