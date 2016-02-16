@@ -84,17 +84,19 @@ $(function(){
     })
     $(window).resize();
 
-//    header
+
+//    返回顶部
     $(window).scroll(function() {
-        console.log($(window).scrollTop());
         if ($(window).scrollTop() > 1000) {
             $(".top").fadeIn(500);
         }else{
             $(".top").fadeOut(500);
         }
     })
+//    header 大
     $(".tiao").click(function(){
         var i=$(".tiao").index(this);
+        console.log($(".tiao"), i,$($('.floor')[i]));
         var newtop=$($('.floor')[i]).offset().top-50;
         $({top:$(window).scrollTop()}).animate(
             {top:newtop},
@@ -106,11 +108,22 @@ $(function(){
             }
         )
     })
+//    header 小
+    $(".tiao1").click(function(){
+        var i=$(".tiao1").index(this);
+        console.log($(".tiao1"), i,$($('.floor1')[i]));
+        var newtop=$($('.floor1')[i]).offset().top-50;
+        $({top:$(window).scrollTop()}).animate(
+            {top:newtop},
+            {
+                duration:700,
+                step:function(){
+                    $(window).scrollTop(this.top);
+                }
+            }
+        )
+    })
 
-////鼠标经过header
-//    $(".header-con").hover(function(){
-//
-//    })
 
 
 
