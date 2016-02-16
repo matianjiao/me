@@ -154,14 +154,14 @@ $(function(){
     $("span[data-role='xiangxia']").click(function(){
         if(flag1){
             $(".xia2").css({transform:"rotateX(0deg)"});
-            $(".huan").css({display:"none"});
+            $(".huan").css({zIndex:"9"});
             setTimeout(function(){
                 $(".xia1").css({display:"block",});
             },800);
             flag1=false;
         }else{
             $(".xia1").css({display:"none"});
-            $(".huan").css({display:"block"});
+            $(".huan").css({zIndex:"15"});
             setTimeout(function(){
                 $(".xia2").css({transform:"rotateX(-90deg)"});
             },200);
@@ -276,6 +276,7 @@ $(function(){
     $(window).resize();
 
     $(".hda").click(function(){
+        console.log(1);
         $(".youxida").finish();
         $(".youxida").fadeOut(1000);
         $(".youxida").eq(huanda).fadeIn(1000);
